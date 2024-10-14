@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test" enabled="true">
+    <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="tests.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="AlertTest"  enabled="false">
+   <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="tests.AlertTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="TextboxTest"  enabled="false">
+   <groups>
+   <run>
+   <include name="sanity"></include>
+   </run>
+   </groups>
+    <classes>
+      <class name="tests.TextboxTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test  name="Buttontest"  enabled="false">
+    <classes>
+      <class name="tests.Buttontest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test  name="UploadFileTest"  enabled="false">
+     <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="tests.UploadFileTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test  name="WebTableTest"  enabled="false">
+    <classes>
+      <class name="tests.WebTableTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
