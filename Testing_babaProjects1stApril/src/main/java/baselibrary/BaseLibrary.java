@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.junit.runners.model.FrameworkField;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -34,6 +35,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
 import ApplicationUtility.Applicationutility;
 import excelutility.ExcelUtility;
@@ -272,6 +274,13 @@ public class BaseLibrary implements ExcelUtility , Propertyutility , Application
 		
 		getscreenshot("Fail", filename);
 	}
+		
 	}
-}
+	@ Test
+	public void flush () {
+		
+		driver.close();
+	}
+	}
+
 
